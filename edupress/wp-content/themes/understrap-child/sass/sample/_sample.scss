@@ -1,0 +1,176 @@
+@charset "utf-8";
+@use "../all" as *;
+
+.seminar__movie {
+  .movie__content {
+    @include bkp(pc) {
+      margin: 0 auto;
+      max-width: 1160px;
+      padding: 50px 40px 193px;
+    }
+    @include bkp(sp) {
+      padding: 50px 25px 80px;
+    }
+    .movie_box {
+      iframe {
+        width: 100%;
+        height: clamp(244px, 51.983vw, 603px);
+        @include bkp(sp) {
+          height: clamp(244px, 65.067vw, 603px);
+        }
+      }
+    }
+    .download__wrap {
+      margin-top: 78px;
+      display: flex;
+      justify-content: space-between;
+      @include bkp(sp) {
+        display: block;
+        margin-top: 60px;
+      }
+      &--box {
+        @include bkp(pc) {
+          width: 432px;
+        }
+        @include bkp(sp) {
+          &:not(:last-child) {
+            margin-bottom: 80px;
+          }
+        }
+        .box_title {
+          font-size: 28px;
+          line-height: 1.21;
+          font-weight: bold;
+          padding-left: 24px;
+          position: relative;
+          @include bkp(sp) {
+            font-size: 24px;
+          }
+          &::before {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 4px;
+            height: 34px;
+            top: 0;
+            left: 0;
+            background-color: $baseblue;
+            border-radius: 5px;
+            @include bkp(sp) {
+              height: 29px;
+            }
+          }
+          &.red {
+            &::before {
+              background-color: #d11330;
+            }
+          }
+        }
+        .box_text {
+          margin-top: 24px;
+          font-size: 16px;
+          letter-spacing: 0.04em;
+          line-height: 1.75;
+          @include bkp(sp) {
+            font-size: 15px;
+            margin-top: 20px;
+          }
+        }
+        .download_link {
+          &.blue {
+            display: block;
+            margin-top: 36px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            border-radius: 6px;
+            text-align: center;
+            background-color: $baseblue;
+            border-color: $baseblue;
+            border: 1px solid $baseblue;
+            padding: 28px 0;
+            width: 360px;
+            position: relative;
+            @include bkp(sp) {
+              width: 100%;
+              max-width: 360px;
+              margin-top: 26px;
+            }
+            &::after {
+              position: absolute;
+              content: "";
+              background: url(../../img/common/btn-arrow-w.svg) no-repeat center;
+              background-size: cover;
+              top: 0;
+              right: 0;
+              width: 23px;
+              height: 23px;
+              top: 50%;
+              transform: translate(0, -50%);
+              right: 25px;
+              transition: 0.3s;
+            }
+            @include bkp(pc) {
+              &:hover {
+                background-color: #fff;
+                color: $baseblue;
+                &::after {
+                  background: url(../../img/common/btn-arrow-b.svg) no-repeat
+                    center;
+                  background-size: cover;
+                }
+              }
+            }
+          }
+          &.red {
+            display: block;
+            margin-top: 36px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            border-radius: 6px;
+            text-align: center;
+            background-color: #d11330;
+            border-color: #d11330;
+            border: 1px solid #d11330;
+            padding: 28px 0;
+            width: 360px;
+            position: relative;
+            @include bkp(sp) {
+              width: 100%;
+              max-width: 360px;
+              margin-top: 26px;
+            }
+            &::after {
+              position: absolute;
+              content: "";
+              background: url(../../img/common/btn-arrow-w.svg) no-repeat center;
+              background-size: cover;
+              top: 0;
+              right: 0;
+              width: 23px;
+              height: 23px;
+              top: 50%;
+              transform: translate(0, -50%);
+              right: 25px;
+              transition: 0.3s;
+            }
+            @include bkp(pc) {
+              &:hover {
+                background-color: #fff;
+                color: #d11330;
+                &::after {
+                  background: url(../../img/common/btn-arrow-r.svg) no-repeat
+                    center;
+                  background-size: cover;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

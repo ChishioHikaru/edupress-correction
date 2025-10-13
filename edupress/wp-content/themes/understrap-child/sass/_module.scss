@@ -1,0 +1,259 @@
+@charset "utf-8";
+@use "theme" as *;
+@use "sass:map";
+
+$breakpoints: (
+  "sp": "screen and (max-width: 750px)",
+  "pc": "screen and (min-width: 751px)",
+) !default;
+
+@mixin bkp($breakpoint: "sp") {
+  $query: map.get($breakpoints, $breakpoint);
+  @if $query == null {
+    @error 'Unknown breakpoint "#{$breakpoint}". Available: #{map.keys($breakpoints)}';
+  }
+  @media #{$query} {
+    @content;
+  }
+}
+
+@mixin thumbHover() {
+  > div {
+    overflow: hidden;
+  }
+  img {
+    transition: transform 0.6s cubic-bezier(0.52, 0.11, 0.05, 0.89);
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@mixin opacityHover() {
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.yu {
+  font-family: "Yu Mincho", "Hiragino Mincho Pro", "Hiragino Serif", serif;
+  font-weight: 500;
+}
+
+.en {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.ablt {
+  position: absolute;
+}
+
+.flx {
+  display: flex;
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+  &.jfc_sb {
+    justify-content: space-between;
+  }
+  &.jfc_c {
+    justify-content: center;
+  }
+  &.aic {
+    align-items: center;
+  }
+  &.clm {
+    flex-direction: column;
+    & > * {
+      min-height: 0%;
+    }
+  }
+}
+
+.img_link {
+  @include bkp(pc) {
+    &:hover {
+      .hover_scl {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      .arrow_link {
+        &::before {
+          opacity: 1;
+          right: 0;
+          transition: 0.3s;
+        }
+        &::after {
+          opacity: 0;
+        }
+      }
+    }
+  }
+  .hover_scl {
+    overflow: hidden;
+  }
+}
+
+// .arrow_link {
+//   display: block;
+//   font-size: 18px;
+//   border-bottom: 2px solid #3e3e3e;
+//   padding-bottom: 20px;
+//   position: relative;
+//   @include bkp(sp) {
+//     font-size: 16px;
+//     padding-bottom: 14px;
+//   }
+//   &::before {
+//     position: absolute;
+//     content: '';
+//     background: url(../../img/common/arrow.svg) no-repeat center;
+//     background-size: cover;
+//     width: 18px;
+//     height: 14px;
+//     top: 4px;
+//     right: 20px;
+//     opacity: 0;
+//   }
+//   &::after {
+//     position: absolute;
+//     content: '';
+//     background: url(../../img/common/arrow.svg) no-repeat center;
+//     background-size: cover;
+//     width: 18px;
+//     height: 14px;
+//     top: 4px;
+//     right: 0;
+//   }
+//   @include bkp(pc) {
+//     &:hover {
+//       &::before {
+//         opacity: 1;
+//         right: 0;
+//         transition: 0.3s;
+//       }
+//       &::after {
+//         opacity: 0;
+//       }
+//     }
+//   }
+// }
+
+// .external_link {
+//   display: block;
+//   font-size: 16px;
+//   border-bottom: 2px solid #3e3e3e;
+//   padding-bottom: 20px;
+//   position: relative;
+//   @include bkp(sp) {
+//     font-size: 16px;
+//     padding-bottom: 14px;
+//   }
+//   &::before {
+//     position: absolute;
+//     content: '';
+//     background: url(../../img/common/external-link-w.svg) no-repeat center;
+//     background-size: cover;
+//     top: 6px;
+//     right: 6px;
+//     width: 14px;
+//     height: 13px;
+//     opacity: 0;
+//   }
+//   &::after {
+//     position: absolute;
+//     content: '';
+//     background: url(../../img/common/external-link-w.svg) no-repeat center;
+//     background-size: cover;
+//     top: 0;
+//     right: 0;
+//     width: 14px;
+//     height: 13px;
+//   }
+//   @include bkp(pc) {
+//     &:hover {
+//       &::before {
+//         opacity: 1;
+//         top: 0;
+//         right: 0;
+//         transition: 0.3s;
+//       }
+//       &::after {
+//         opacity: 0;
+//       }
+//     }
+//   }
+// }
+
+//基本本文
+.lead {
+  font-size: 16px;
+  line-height: 2;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  @include bkp(sp) {
+    font-size: 15px;
+  }
+}
+
+//自動文字詰め
+//font-feature-settings: "palt";
+
+//縦書き（SPで解除）
+.vertical {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  -o-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  @include bkp(sp) {
+    writing-mode: horizontal-tb;
+    -webkit-writing-mode: horizontal-tb;
+    -ms-writing-mode: horizontal-tb;
+  }
+}
+
+//共通ボタン
+.common_btn {
+  display: block;
+  margin: auto;
+  width: 250px;
+  background-color: $baseblue;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  padding: 17px 0;
+  border: 1px solid $baseblue;
+  border-radius: 6px;
+  text-align: center;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    background: url(../../img/common/btn-arrow-w.svg) no-repeat center;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 20px;
+    transition: 0.3s;
+  }
+  @include bkp(pc) {
+    &:hover {
+      background-color: #fff;
+      color: $baseblue;
+      &::after {
+        background: url(../../img/common/btn-arrow-b.svg) no-repeat center;
+        background-size: cover;
+      }
+    }
+  }
+}
+

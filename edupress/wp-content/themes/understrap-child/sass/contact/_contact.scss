@@ -1,0 +1,283 @@
+@charset "utf-8";
+@use "../all" as *;
+
+.form__area {
+  @include bkp(pc) {
+    margin-top: 74px;
+    max-width: 618px;
+    margin: 74px auto 100px;
+  }
+  @include bkp(sp) {
+    margin-top: 50px;
+    padding: 0 25px 50px;
+  }
+  .intro {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    @include bkp(sp) {
+      font-size: 15px;
+      margin-bottom: 26px;
+    }
+  }
+  .base_form {
+    dl {
+      margin-bottom: 30px;
+      @include bkp(sp) {
+        margin-bottom: 24px;
+      }
+      dt {
+        display: flex;
+        align-items: center;
+        margin-bottom: 19px;
+        @include bkp(sp) {
+          margin-bottom: 12px;
+        }
+        &.sp_block {
+          @include bkp(sp) {
+            display: block;
+          }
+          .required {
+            @include bkp(sp) {
+              margin-top: 10px;
+              line-height: 1.4;
+              display: block;
+            }
+          }
+        }
+        .title {
+          font-size: 14px;
+          font-weight: bold;
+          letter-spacing: 0.05em;
+          line-height: 1.42;
+          margin-right: 10px;
+          @include bkp(sp) {
+            max-width: 288px;
+          }
+        }
+        .required {
+          font-size: 12px;
+          letter-spacing: 0.05em;
+          color: #ff0000;
+        }
+        .required_not {
+          font-size: 12px;
+          letter-spacing: 0.05em;
+          color: #009cbd;
+        }
+      }
+      dd {
+        .checkbox_wrap {
+          &.wrap {
+            .wpcf7-form-control {
+              display: flex;
+              flex-wrap: wrap;
+              flex-direction: row;
+              .wpcf7-list-item {
+                margin: 0 40px 16px 0;
+                @include bkp(sp) {
+                  margin: 0 25px 16px 0;
+                }
+              }
+            }
+          }
+          .wpcf7-form-control {
+            display: flex;
+            flex-direction: column;
+            .wpcf7-list-item {
+              margin: 0 0 16px;
+              display: block;
+              @include bkp(sp) {
+                margin: 0 0 14px;
+              }
+              label {
+                display: flex;
+                align-items: center;
+                height: 20px;
+                input {
+                  width: 20px;
+                  height: 20px;
+                }
+                .wpcf7-list-item-label {
+                  font-size: 14px;
+                  letter-spacing: 0.05em;
+                  margin-left: 10px;
+                }
+              }
+            }
+          }
+        }
+        .input_box {
+          .wpcf7-form-control-wrap {
+            input {
+              border: 1px solid #d8d8d8;
+              border-radius: 3px;
+              padding: 15px 10px;
+              width: 100%;
+              font-size: 16px;
+              @include bkp(sp) {
+                padding: 10px;
+                font-size: 15px;
+              }
+            }
+          }
+        }
+        .textarea_box {
+          .wpcf7-form-control-wrap {
+            textarea {
+              border: 1px solid #d8d8d8;
+              border-radius: 3px;
+              width: 100%;
+              height: 136px;
+              padding: 15px 10px;
+              font-size: 16px;
+              @include bkp(sp) {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+      .attention {
+        font-size: 12px;
+        letter-spacing: 0.05em;
+        line-height: 1.5;
+        margin-bottom: 8px;
+        a {
+          border-bottom: 1px solid #000;
+          @include bkp(pc) {
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+        &.color {
+          color: #009cbd;
+          margin-bottom: 12px;
+        }
+        &.blue {
+          color: #009cbd;
+          font-weight: bold;
+          margin-top: 22px;
+        }
+      }
+    }
+    &--policy {
+      .title {
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+      }
+      .text {
+        margin-top: 14px;
+        font-size: 12px;
+        letter-spacing: 0.05em;
+        line-height: 2;
+      }
+      .policycheck {
+        margin-top: 34px;
+        @include bkp(sp) {
+          margin-top: 28px;
+        }
+        .wpcf7-form-control {
+          display: flex;
+          flex-direction: column;
+          .wpcf7-list-item {
+            margin: 0 0 16px;
+            display: block;
+            label {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 20px;
+              input {
+                width: 20px;
+                height: 20px;
+              }
+              .wpcf7-list-item-label {
+                font-size: 14px;
+                letter-spacing: 0.05em;
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+        .wpcf7-not-valid-tip {
+          text-align: center;
+        }
+      }
+    }
+    .contact_btn {
+      cursor: pointer;
+      margin: 42px auto 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 400px;
+      height: 78px;
+      background-color: $baseblue;
+      letter-spacing: 0.1em;
+      border: 1px solid $baseblue;
+      border-radius: 6px;
+      text-align: center;
+      transition: 0.3s;
+      position: relative;
+      @include bkp(sp) {
+        width: 250px;
+        height: 49px;
+        margin: 30px auto 0;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        background: url(../../img/common/btn-arrow-w.svg) no-repeat center;
+        background-size: cover;
+        width: 25px;
+        height: 25px;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 30px;
+        transition: 0.3s;
+        @include bkp(sp) {
+          right: 20px;
+          width: 18px;
+          height: 18px;
+        }
+      }
+      @include bkp(pc) {
+        &:hover {
+          background-color: #fff;
+          &::after {
+            background: url(../../img/common/btn-arrow-b.svg) no-repeat center;
+            background-size: cover;
+          }
+          input {
+            color: $baseblue;
+          }
+        }
+      }
+      p {
+        width: 100%;
+        height: 100%;
+        input {
+          cursor: pointer;
+          width: 100%;
+          height: 100%;
+          color: #fff;
+          background-color: transparent;
+          font-size: 19px;
+          font-weight: bold;
+          letter-spacing: 0.1em;
+          transition: 0.3s;
+          @include bkp(sp) {
+            font-size: 14px;
+          }
+        }
+        .wpcf7-spinner {
+          display: none;
+        }
+      }
+    }
+  }
+}

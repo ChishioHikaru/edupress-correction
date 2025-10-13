@@ -1,0 +1,147 @@
+@charset "utf-8";
+@use "../all" as *;
+
+.form__area {
+  @include bkp(pc) {
+    margin-top: 74px;
+    max-width: 1020px;
+    margin: 74px auto 80px;
+  }
+  @include bkp(sp) {
+    margin-top: 50px;
+    padding: 0 25px 50px;
+  }
+  .intro {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  .base_form {
+    .wpcf7-spinner {
+      display: none;
+    }
+
+    .input_list {
+      dl {
+        border-top: 1px solid #d8d8d8;
+        &:last-child {
+          border-bottom: 1px solid #d8d8d8;
+        }
+        @include bkp(pc) {
+          align-items: center;
+          padding: 24px 85px 30px;
+        }
+        @include bkp(sp) {
+          display: block;
+          padding: 25px 0 20px;
+        }
+        dt {
+          @include bkp(pc) {
+            width: 290px;
+            margin-right: 45px;
+          }
+          .title {
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            line-height: 1.875;
+          }
+        }
+        dd {
+          font-size: 16px;
+          letter-spacing: 0.05em;
+          line-height: 1.875;
+          @include bkp(pc) {
+            width: calc(100% - 290px - 45px);
+          }
+          @include bkp(sp) {
+            margin-top: 6px;
+          }
+        }
+      }
+    }
+
+    .btn_wrap {
+      margin-top: 60px;
+      display: flex;
+      @include bkp(sp) {
+        display: block;
+        margin-top: 30px;
+      }
+      .contact_btn {
+        cursor: pointer;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 400px;
+        height: 78px;
+        background-color: $baseblue;
+        letter-spacing: 0.1em;
+        border: 1px solid $baseblue;
+        border-radius: 6px;
+        text-align: center;
+        transition: 0.3s;
+        position: relative;
+        @media (max-width: 900px) {
+          width: 325px;
+        }
+        @include bkp(sp) {
+          font-size: 18px;
+          width: 250px;
+          height: 50px;
+          margin: 0 auto 20px;
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          background: url(../../img/common/btn-arrow-w.svg) no-repeat center;
+          background-size: cover;
+          width: 25px;
+          height: 25px;
+          top: 50%;
+          transform: translate(0, -50%);
+          right: 30px;
+          transition: 0.3s;
+          @include bkp(sp) {
+            right: 20px;
+          }
+        }
+        @include bkp(pc) {
+          &:hover {
+            background-color: #fff;
+            &::after {
+              background: url(../../img/common/btn-arrow-b.svg) no-repeat center;
+              background-size: cover;
+            }
+            input {
+              color: $baseblue;
+            }
+          }
+        }
+        p {
+          width: 100%;
+          height: 100%;
+          input {
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            background-color: transparent;
+            font-size: 19px;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            transition: 0.3s;
+            @include bkp(sp) {
+              font-size: 14px;
+            }
+          }
+          .wpcf7-spinner {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

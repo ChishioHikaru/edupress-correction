@@ -1,0 +1,82 @@
+/* 
+Theme Name:understrap-child
+Template:understrap
+*/
+
+h2 { 
+font-weight: bold; 
+margin: 20px 0px;
+line-height: 27px;
+position: relative;
+font-size: 20px;
+letter-spacing: 2px;
+padding: 10px 7px 10px 10px;
+background-color: #10a2c1;
+color: #ffffff;
+}
+
+h3 { 
+font-weight: bold; 
+margin: 20px 0px;
+line-height: 27px;
+position: relative;
+font-size: 20px;
+letter-spacing: 2px;
+padding: 10px 7px 10px 10px;
+background-color: #10a2c1;
+color: #ffffff;
+}
+
+h4 { 
+font-weight: bold; 
+margin: 20px 0px;
+line-height: 27px;
+position: relative;
+font-size: 20px;
+letter-spacing: 2px;
+padding: 10px 7px 10px 10px;
+background-color: #10a2c1;
+color: #ffffff;
+}
+
+p {
+line-height: 2.0;
+}
+
+.col-md {
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+/*.col-md{
+background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
+                  linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
+background-size: 16px 16px;
+background-repeat: repeat;
+background-position: center center;
+padding: 20px;
+}*/
+div.entry-content p{
+padding-left: 10px;
+padding-right: 10px;
+}
+
+.original-button {
+  display: flex;  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  border-radius: 2px;
+  width: 400px;
+  height: 60px;
+  font-weight: bold;
+  transition: 0.3s;
+  background-image: radial-gradient(circle at 100% 0%, rgba(6, 69, 196, 1), rgba(0, 155, 189, 1));
+}
+.original-button:hover {
+  opacity: .5;
+  text-decoration: none;
+  color: #def6fb;
+}

@@ -1,0 +1,24 @@
+@charset "utf-8";
+@use "../all" as *;
+
+.form__area {
+  margin-top: 74px;
+  padding-bottom: 80px;
+  @include bkp(sp) {
+    margin-top: 50px;
+    padding: 0 25px 50px;
+  }
+  p {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 2;
+    text-align: center;
+    @include bkp(sp) {
+      font-size: 15px;
+      text-align: left;
+    }
+  }
+  .common_btn {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,24 @@
+@charset "utf-8";
+@use '../all' as *;
+
+.u-wbr {
+  word-break: keep-all;
+}
+
+.pc-none {
+  display: none!important;
+}
+
+.sp-none {
+  display: block!important;
+}
+
+@include bkp(sp) {
+  .sp-none {
+    display: none!important;
+  }
+
+  .pc-none {
+    display: block!important;
+  }
+}

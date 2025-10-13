@@ -1,0 +1,105 @@
+@charset "utf-8";
+@use 'module' as *;
+
+.underline {
+  position: relative;
+  &::after {
+    content: '';
+    background: #dadada;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transform: scale(0, 1);
+    transition: transform 0.3s;
+    transform-origin: right top;
+  }
+  @include bkp(pc) {
+    &:hover {
+      &::after {
+        transform-origin: left top;
+        transform: scale(1, 1);
+      }
+    }
+  }
+}
+
+//スクロール処理
+.fade_y {
+  transform: translateY(10px);
+  opacity: 0;
+  &.on {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: 0.4s;
+  }
+}
+
+.scr_cvr {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  opacity: 0;
+  transition: 0.5s;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    background-color: #000;
+    transition: all 0.6s cubic-bezier(0.5, 0, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  &.on {
+    opacity: 1;
+    &::before {
+      right: -100%;
+      transition-delay: 0.3s;
+    }
+  }
+}
+
+@mixin hover-border() {
+  @include bkp(pc) {
+    span {
+      position: relative;
+      &::after {
+        content: '';
+        height: 1px;
+        background-color: #fff;
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        transition: transform 0.3s;
+        width: 100%;
+        transform: scale(0, 1);
+        transform-origin: right top;
+      }
+      &:hover {
+        &::after {
+          transform-origin: left top;
+          transform: scale(1, 1);
+        }
+      }
+    }
+  }
+}
+
+.img_scl {
+  overflow: hidden;
+  img {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+  &.on {
+    img {
+      transform: scale(1);
+      opacity: 1;
+      transition: 1s;
+    }
+  }
+}

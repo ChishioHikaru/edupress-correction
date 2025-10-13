@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="グループ_70344" data-name="グループ 70344" transform="translate(-410 -2505)">
+    <g id="楕円形_531" data-name="楕円形 531" transform="translate(410 2505)" fill="#fff" stroke="#009cbd" stroke-width="1.5">
+      <circle cx="25" cy="25" r="25" stroke="none"/>
+      <circle cx="25" cy="25" r="24.25" fill="none"/>
+    </g>
+    <path id="パス_77080" data-name="パス 77080" d="M0,6.3v9.87a6.312,6.312,0,0,0,6.3,6.3H13.39l6.6,5.6a.831.831,0,0,0,1.368-.633V22.48h.269a6.312,6.312,0,0,0,6.305-6.3V6.3A6.312,6.312,0,0,0,21.627,0H6.3A6.312,6.312,0,0,0,0,6.3m1.662,0A4.649,4.649,0,0,1,6.3,1.662H21.627A4.649,4.649,0,0,1,26.27,6.3v9.87a4.649,4.649,0,0,1-4.643,4.643h-1.1a.831.831,0,0,0-.831.831v4l-5.463-4.636a.831.831,0,0,0-.538-.2H6.3a4.649,4.649,0,0,1-4.643-4.643Z" transform="translate(420.652 2518)" fill="#009cbd" stroke="#fff" stroke-width="0.3"/>
+    <line id="線_444" data-name="線 444" y2="7.293" transform="translate(435.002 2523.619)" fill="none" stroke="#009cbd" stroke-linecap="round" stroke-width="2"/>
+    <circle id="楕円形_532" data-name="楕円形 532" cx="1.25" cy="1.25" r="1.25" transform="translate(433.752 2533.646)" fill="#009cbd"/>
+  </g>
+</svg>
