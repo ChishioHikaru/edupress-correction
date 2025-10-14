@@ -56,7 +56,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="/" target="_blank">EDUPRESS</a>
         </h1>
 
-        <div class="l-header__nav">
+        <div class="l-header__nav -first">
           <div class="l-navigation">
             <div class="l-navigation__inr">
               <ul>

@@ -162,9 +162,11 @@ body {
     @media (max-width: 1260px) {
       display: none;
     }
-    @include bkp(pc) {
-      &:hover {
-        opacity: 0.6;
+    a {
+      @include bkp(pc) {
+        &:hover {
+          opacity: 0.6;
+        }
       }
     }
   }
@@ -314,6 +316,7 @@ body {
                 font-size: 14px;
                 font-weight: bold;
                 white-space: nowrap;
+                line-height: 1;
                 span {
                   transition: 0.3s;
                 }
@@ -341,7 +344,7 @@ body {
                 &.shadow {
                   padding: 14px 40px 14px 22px;
                   border-radius: 3px;
-                  box-shadow: 1px 1px 5px 0px rgba(36, 65, 93, 0.5);
+                  box-shadow: 1px 1px 5px 0px rgba(36, 65, 93, 0.5) !important;
                   position: relative;
                   z-index: 1;
                   &::after {
@@ -388,6 +391,7 @@ body {
                   border: 1px solid $baseblue;
                   position: relative;
                   z-index: 1;
+                  line-height: 1;
                   @include bkp(pc) {
                     &:hover {
                       background-color: #fff;

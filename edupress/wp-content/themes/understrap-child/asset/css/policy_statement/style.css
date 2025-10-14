@@ -752,7 +752,7 @@ svg {
   }
 }
 @media screen and (min-width: 751px) {
-  .header .group_logo:hover {
+  .header .group_logo a:hover {
     opacity: 0.6;
   }
 }
@@ -918,6 +918,7 @@ svg {
   font-size: 14px;
   font-weight: bold;
   white-space: nowrap;
+  line-height: 1;
 }
 .header .header_inner .nav_area .nav__mainnav ul li .parent_list span {
   transition: 0.3s;
@@ -946,7 +947,7 @@ svg {
 .header .header_inner .nav_area .nav__mainnav ul li .parent_list.shadow {
   padding: 14px 40px 14px 22px;
   border-radius: 3px;
-  box-shadow: 1px 1px 5px 0px rgba(36, 65, 93, 0.5);
+  box-shadow: 1px 1px 5px 0px rgba(36, 65, 93, 0.5) !important;
   position: relative;
   z-index: 1;
 }
@@ -987,6 +988,7 @@ svg {
   border: 1px solid #009cbd;
   position: relative;
   z-index: 1;
+  line-height: 1;
 }
 @media screen and (min-width: 751px) {
   .header .header_inner .nav_area .nav__rightnav ul li .parent_list.blue_link:hover {
