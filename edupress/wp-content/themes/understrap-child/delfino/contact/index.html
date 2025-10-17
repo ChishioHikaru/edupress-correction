@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>お問合せ・ご注文 | デルフィーノ施工サービス | 株式会社エデュプレス</title>
+<link rel="icon" href="https://edupress.net/img/favicon.ico">
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-style-Type" content="text/css" />
+<meta name="keywords" content="デルフィーノ,delfino,感染防御,感染予防,抗菌,消臭,防カビ,問合せ,注文,フォーム,メール,質問">
+<meta name="description" lang="ja" content="delfino(デルフィーノ)施工サービスに関するお問合せ・ご注文はフォームに記入のうえ、送信ボタンをクリックしてください。 また、施工サービスに対する疑問、質問などございましたらフォームに必要事項をご記入のうえ、お気軽にご連絡ください。">
+<link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
+<![if !IE 6]><link href="../css/layout.css" rel="stylesheet" type="text/css" media="screen" /><![endif]>
+<!--[if IE 6]>
+<link href="../css/layout_ie6.css" rel="stylesheet" type="text/css" media="screen" />
+<![endif]-->
+<link href="../css/print.css" rel="stylesheet" type="text/css" media="print" />
+<script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryValidationCheckbox.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
+<link href="SpryAssets/SpryValidationCheckbox.css" rel="stylesheet" type="text/css" />
+	
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWKMXR2');</script>
+<!-- End Google Tag Manager -->
+	
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWKMXR2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="container" class="wide cf">
+  <div id="header">
+    <div id="logo_delfino">
+      <h1>delfino</h1>
+    </div>    <p class="message">『クリーンな空間』で、企業の安心感&amp;信頼性をアップ!</p>
+    <ul id="subnavi">
+      <li><a href="http://www.edupress.net/delfino/faq/index.html">よくあるご質問</a></li>
+      <li><a href="http://www.edupress.net/delfino/company/index.html">会社概要</a></li>
+    </ul>
+    <div class="contactbtn">
+      <p><a href="#"><strong>お問い合わせ・ご注文フォーム</strong><br />
+        Tel.03-5807-8100<br />
+        <em>株式会社エデュプレス　デルフィーノ係</em></a></p>
+    </div>
+</div>
+  <div id="globalnavi">
+    <ul>
+      <li id="gn-home"><a href="http://www.edupress.net/delfino/index.html">ホーム</a></li>
+      <li id="gn-about"><a href="http://www.edupress.net/delfino/about/index.html">デルフィーノとは</a></li>
+      <li id="gn-service"><a href="http://www.edupress.net/delfino/service/index.html">コーティングサービスについて</a></li>
+      <li id="gn-advantage"><a href="http://www.edupress.net/delfino/advantage/index.html">導入メリット</a></li>
+      <li id="gn-pricelist"><a href="http://www.edupress.net/delfino/pricelist/index.html">コーティングまでの流れ/料金</a></li>
+    </ul>
+  </div>
+  <div id="topicpath">
+    <ol>
+      <li><a href="http://www.edupress.net/delfino/index.html">ホーム</a></li>
+      <li>お問合せ・ご注文</li>
+    </ol>
+  </div>
+  <div id="content" class="contact cf">
+    <h2>お問合せ・ご注文</h2>
+    <p>デルフィーノコーティングに関するお問合せ・ご注文は下記フォームに記入のうえ、送信ボタンをクリックしてください。
+      また、デルフィーノに対する疑問、質問などございましたら下記フォームに必要事項をご記入のうえ、お気軽にご連絡ください。<br />
+      ※は必須項目ですので、必ずご入力ください。    </p>
+    <form action="/FS-APL/FS-Enq/enq.cgi" method="post">
+　　<input type="hidden" name="config_file" value="delfino">
+      <table>
+        <tbody>
+          <tr>
+            <th>お名前<span class="hissu"> ※</span></th>
+            <td><span id="sprytextfield1">
+              <input type=text name="名前" size=40 />
+            <span class="textfieldRequiredMsg">値を指定する必要があります。</span></span></td>
+          </tr>
+          <tr>
+            <th>カナ <span class="hissu">※</span></th>
+            <td><span id="sprytextfield2">
+              <input type=text name="カナ" size=40 />
+            <span class="textfieldRequiredMsg">値を指定する必要があります。</span></span></td>
+          </tr>
+          <tr>
+            <th>メールアドレス<span class="hissu">※</span></th>
+            <td><span id="sprytextfield3">
+              <input type=text name="メールアドレス" size=40 />
+            <span class="textfieldRequiredMsg">値を指定する必要があります。</span></span></td>
+          </tr>
+          <tr>
+            <th>電話番号<span class="hissu">※</span></th>
+            <td><span id="sprytextfield4">
+              <input type=text name="電話番号" size=40 />
+            <span class="textfieldRequiredMsg">値を指定する必要があります。</span></span></td>
+          </tr>
+          <tr>
+            <td colspan="2">&nbsp;</td>
+          </tr>
+          <tr>
+            <th>コーティング希望日時</th>
+            <td><input type="text" name="施工月" size="6" id="施工月" /> 
+            月
+            <input type="text" name="施工日" size="6" id="施工日" />
+            日(
+            <input type="text" name="施工時間" size="6" id="施工時間" />
+            )時頃</td>
+          </tr>
+          <tr>
+            <th>コーティング先住所</th>
+            <td><input type=text name="施工先住所" size=40 id="施工先住所" /></td>
+          </tr>
+          <tr>
+            <th>コーティング場所</th>
+            <td><label>
+              <select name="施工場所" id="施工場所">
+                <option>選択してください</option>
+                <option value="部屋">部屋</option>
+                <option value="トイレ">トイレ</option>
+                <option value="車内">車内</option>
+                <option value="その他">その他</option>
+              </select>
+              <br />
+            その他の場合
+            <input type="text" name="施工場所-その他" size="40" id="施工場所-その他" />
+            </label></td>
+          </tr>
+          <tr>
+            <th>コーティング面積</th>
+            <td>約
+            <input type="text" name="施工面積-帖" size="6" id="施工面積-帖" />
+            帖　(約
+            <input type="text" name="施工面積-m2" size="6" id="施工面積-m2" />
+            m2
+            )</td>
+          </tr>
+          <tr>
+            <th>コーティング当日の連絡先</th>
+            <td><input type="text" name="施工当日の連絡先" size="40" id="施工当日の連絡先" /></td>
+          </tr>
+          <tr>
+            <th nowrap="nowrap">お問い合わせ内容</th>
+            <td><textarea name="お問い合わせ内容" rows="7" cols="53" wrap=OFF></textarea></td>
+          </tr>
+          <tr>
+            <td align="left" colspan="2"><p><font size="2">※ 個人情報のお取扱について </font></p>
+              <ul>
+                <li><font size="2"> ご記入いただきましたお客様情報は、弊社の個人情報保護方針に従って適正に管理いたします。 またお客様の同意なく第三者に委託提供はいたしません。</font></li>
+                <li><font size="2">これらの個人情報は、お問い合わせに対するご回答および弊社サービスに関するご案内を差し上げるためのみ利用いたします。</font></li>
+                <li><font size="2">未入力項目の内容によりましては、十分なサービスのご提供ができない場合がありますのでご了承ください。</font></li>
+                <li><font size="2">上記以外のお取り扱い事項として「<a href="http://www.edupress.net/privacy2.html" target="_blank" style="text-decoration: underline;">個人情報の取り扱いについて</a>」をご覧下さい。</font></li>
+              </ul></td>
+          </tr>
+          <tr>
+            <td nowrap="nowrap">&nbsp;</td>
+            <td><span id="sprycheckbox1">
+              <input name="同意" type="checkbox" id="今後の案内" value="同意します" />
+            <span class="checkboxRequiredMsg">項目を選択してください。</span></span><font size="2">内容に同意の上お問合せ・ご注文を申し込みます。</font></td>
+          </tr>
+          <tr>
+            <td nowrap="nowrap">&nbsp;</td>
+            <td nowrap="nowrap"><div align="right"><a href="http://www.edupress.net/privacy.html" target="_blank"><font size="2">個人情報保護方針</font></a></div></td>
+          </tr>
+          <tr>
+            <td colspan="2" class="postbtn">以上の内容でよろしければ送信ボタンをクリックしてください。<br />
+            <input type="reset" value="　　クリア　　">　　　　
+            <input type="submit" value="　　送信　　"></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+</div>
+<div id="footer">
+  <div id="footerinnerblock">
+    <div class="btn_pagetop"><a href="#">Pagetop</a></div>
+    <dl class="logo_white">
+      <dt>抗菌・抗ウイルス・防臭コーティングサービス　デルフィーノ</dt>
+      <dd><a href="http://www.edupress.net/">株式会社エデュプレス　デルフィーノ係</a></dd>
+    </dl>
+    <div id="sitemap" class="cf">
+      <ul>
+        <li><a href="http://www.edupress.net/delfino/about/index.html">デルフィーノとは</a>
+          <ul>
+            <li><a href="http://www.edupress.net/delfino/function/index.html">5つの機能</a></li>
+            <li><a href="http://www.edupress.net/delfino/scene/index.html">利用シーン</a></li>
+            <li><a href="http://www.edupress.net/delfino/techinfo/index.html">技術情報</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="http://www.edupress.net/delfino/service/index.html">コーティングサービスについて</a>
+          <ul>
+            <li><a href="http://www.edupress.net/delfino/results/index.html">導入実績</a></li>
+            <li><a href="http://www.edupress.net/delfino/voice/user.html">利用者の声</a></li>
+            <li><a href="http://www.edupress.net/delfino/voice/index.html">推薦者の声</a></li>
+          </ul>
+        </li>
+        <li><a href="http://www.edupress.net/delfino/advantage/index.html">導入メリット</a></li>
+        <li><a href="http://www.edupress.net/delfino/pricelist/index.html">コーティングまでの流れ/料金</a></li>
+		<li><a href="http://www.edupress.net/delfino/agency/index.html">販売代理店・施工代理店の概要</a></li>
+      </ul>
+      <ul>
+        <li><a href="http://www.edupress.net/delfino/faq/index.html">よくあるご質問</a></li>
+        <li><a href="http://www.edupress.net/delfino/company/index.html">会社概要</a></li>
+        <li><a href="https://www.edupress.net/delfino/contact/index.html">お問い合わせ・ご注文</a></li>
+        <li><a href="http://www.edupress.net/privacy.html">個人情報保護方針</a></li>
+      </ul>
+    </div>
+    <p class="copyright">© Edupress Inc.</p>
+  </div>
+</div>
+<script type="text/javascript">
+<!--
+var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
+var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2");
+var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3");
+var sprytextfield4 = new Spry.Widget.ValidationTextField("sprytextfield4");
+var sprycheckbox1 = new Spry.Widget.ValidationCheckbox("sprycheckbox1");
+//-->
+</script>
+</body>
+</html>

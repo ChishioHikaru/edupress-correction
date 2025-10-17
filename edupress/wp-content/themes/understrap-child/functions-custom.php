@@ -355,15 +355,28 @@ ContactForm7 バリデーションチェック
  *********************/
 add_filter('wpcf7_validate_text*', 'validate_kana_katakana', 10, 2);
 add_filter('wpcf7_validate_text',  'validate_kana_katakana', 10, 2);
+
 function validate_kana_katakana($result, $tag)
 {
-  if ($tag->name !== 'kana') return $result;
-  $value = isset($_POST['kana']) ? trim((string) $_POST['kana']) : '';
-  if (!preg_match('/^[ァ-ヿー　]+$/u', $value)) {
+  // 対象のname属性を配列で指定
+  $target_names = ['kana', 'your-kana', 'your-katakana'];
+
+  // 対象外のフィールドならスキップ
+  if (!in_array($tag->name, $target_names, true)) {
+    return $result;
+  }
+
+  // 入力値を取得
+  $value = isset($_POST[$tag->name]) ? trim((string) $_POST[$tag->name]) : '';
+
+  // 空欄は required 属性に任せる（空でなければチェック）
+  if ($value !== '' && !preg_match('/^[ァ-ヿー　]+$/u', $value)) {
     $result->invalidate($tag, 'フリガナは全角カタカナで入力してください。');
   }
+
   return $result;
 }
+
 
 /*********************
 共通CSSを全ページで読み込む

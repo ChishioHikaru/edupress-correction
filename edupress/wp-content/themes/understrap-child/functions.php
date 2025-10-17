@@ -1,8 +1,9 @@
 <?php
-add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
-function theme_enqueue_styles() {
-  wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-  wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array('parent-style'));
+add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
+function theme_enqueue_styles()
+{
+  wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
+  wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', array('parent-style'));
 
   if (is_page_template('page-lptemp.php')) {
     wp_enqueue_style('lp-style', get_stylesheet_directory_uri() . '/lp/assets/css/lp_style.css', array(), filemtime(get_theme_file_path() . '/lp/assets/css/lp_style.css'), 'all');
@@ -42,8 +43,9 @@ add_action('after_setup_theme', 'theme_setup');
 require get_stylesheet_directory() . '/functions-custom.php';
 
 // Understrapテーマの`theme.min.css`スタイルシートを読み込まないようにする関数
-function custom_remove_understrap_styles() {
-    wp_dequeue_style('understrap-styles');
-    wp_deregister_style('understrap-styles');
+function custom_remove_understrap_styles()
+{
+  wp_dequeue_style('understrap-styles');
+  wp_deregister_style('understrap-styles');
 }
 add_action('wp_enqueue_scripts', 'custom_remove_understrap_styles', 100);

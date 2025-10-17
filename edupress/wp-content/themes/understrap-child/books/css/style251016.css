@@ -1,0 +1,928 @@
+html, body,
+h1, h2, h3, h4, h5, h6,
+a, p, span,
+em, small, strong,
+sub, sup,
+mark, del, ins, strike,
+abbr, dfn,
+blockquote, q, cite,
+code, pre,
+ol, ul, li, dl, dt, dd,
+div, section, article,
+main, aside, nav,
+header, hgroup, footer,
+img, figure, figcaption,
+address, time,
+audio, video,
+canvas, iframe,
+details, summary,
+fieldset, form, label, legend,
+table, caption,
+tbody, tfoot, thead,
+tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  line-height: 1.4;
+}
+
+* {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+img {
+  border-style: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+[disabled] {
+  cursor: not-allowed;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Typography helpers */
+
+.has-text-centered {
+  text-align: center !important;
+}
+
+/* レイアウト */
+
+body {
+  color: #4e4e4e;
+  background-color: #fafafa;
+  letter-spacing: 1px;
+  font-feature-settings: "palt"1;
+  font-kerning: auto;
+  font-family: -apple-system,
+  BlinkMacSystemFont,
+  "Helvetica Neue",
+  "Segoe UI",
+  "Hiragino Kaku Gothic ProN",
+  Meiryo,
+  sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1216px) {
+  .container {
+    max-width: 1152px;
+  }
+}
+
+@media screen and (min-width: 1408px) {
+  .container {
+    max-width: 1344px;
+  }
+}
+
+.article {
+  background-color: #e2edf0;
+  padding: 2rem 1.5rem;
+}
+
+.article:first-child {
+  padding-top: 2rem;
+}
+
+.article:last-child {
+  padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .article {
+    padding: 2rem 0;
+  }
+  .article:first-child {
+    padding-top: 3rem;
+  }
+
+  .article:last-child {
+    padding-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .article .container {
+    max-width: 800px;
+  }
+}
+
+/* ボタン */
+
+.button {
+  -webkit-appearance: none;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: 1rem;
+  line-height: 1;
+  height: 3.25em;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(.375em - 2px);
+  padding-left: .75em;
+  padding-right: .75em;
+  padding-top: calc(.375em - 1px);
+  text-align: center;
+  white-space: nowrap;
+  margin-bottom: .5rem;
+}
+
+.button.btn-contact {
+  font-size: .875rem;
+  background-color: #169cba;
+  color: #fff;
+  margin-bottom: 0;
+  padding-left: .75em;
+  padding-right: .75em;
+}
+
+.button.btn-lump {
+  background-color: #005ba7;
+  color: #fff;
+  font-size: 1.125rem;
+}
+
+.button.btn-publish {
+  background-color: #169cba;
+  color: #fff;
+  font-size: 1.125rem;
+  padding-left: 3.8em;
+  padding-right: 3.8em;
+}
+
+@media screen and (min-width: 768px) {
+  .button.btn-contact {
+    padding-left: 2.4em;
+    padding-right: 2.4em;
+  }
+  .button.btn-publish {
+    background-color: #169cba;
+    padding-left: .75em;
+    padding-right: .75em;
+  }
+}
+
+/* 調整 */
+
+.mb1rem {
+  margin-bottom: 1rem;
+}
+
+.mb2rem {
+  margin-bottom: 2rem;
+}
+
+.mb3rem {
+  margin-bottom: 3rem;
+}
+
+/* ヘッダー */
+
+.header {
+  padding: 1rem;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 130px;
+  height: 17px;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 1.25rem 0;
+  }
+  .logo {
+    width: 160px;
+    height: 21px;
+  }
+}
+
+/* ヒーロー */
+
+.hero {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero.is-book {
+  color: #fff;
+}
+
+.hero-body {
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 1.5rem 1.5rem 2rem;
+  background-image: url(../img/bgimg1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-body::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: radial-gradient(ellipse at top, rgba(22, 156, 186, 0) 50%, rgba(22, 156, 186, 1) 100%);
+}
+
+@media screen and (min-width: 769px), print {
+  .hero.is-medium .hero-body {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+  }
+}
+
+.hero-body .container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-body .container {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-body .container {
+    max-width: 800px;
+  }
+}
+
+.hero-title-area {
+  display: flex;
+  flex-direction: column;
+  margin-right: 0;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-start;
+  order: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+.authorized-text em {
+  font-size: 1.375rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.introduce-text {
+  font-size: 1.375rem;
+  font-weight: normal;
+}
+
+.title {
+  font-size: 1.25rem;
+  line-height: 1.1;
+  border: 1px solid #f00;
+  margin-bottom: .5rem;
+  order: 0;
+  text-align: center;
+  letter-spacing: .5rem;
+  padding: .25rem 0 .25rem .8rem;
+}
+
+.hero-sub-title {
+  font-size: 1.25rem;
+  line-height: 1.1;
+  border: 1px solid #fff;
+  margin-bottom: .5rem;
+  order: 0;
+  text-align: center;
+  letter-spacing: .5rem;
+  padding: .25rem 0 .25rem .8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-title-area {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+  .hero-title {
+    font-size: 3rem;
+    line-height: 1.4;
+  }
+  .authorized-text em {
+    font-size: 2.4rem;
+  }
+  .introduce-text {
+    font-size: 2.4rem;
+  }
+  .hero-sub-title {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: .8rem;
+    padding: .5rem 0 .5rem .8rem;
+  }
+}
+
+.hero-book-img {
+  display: flex;
+  margin-left: 0;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-book-img .book-img {
+  width: 120px;
+  height: auto;
+  border-top: 1px solid rgba(255,255,255,.25);
+  border-left: 1px solid rgba(255, 255, 255, .25);
+}
+
+.hero-book-img .book1 {
+  z-index: 10;
+  box-shadow: 2px 3px 8px rgba(0,0,0,.3);
+}
+
+.hero-book-img .book2 {
+  transform: translate(-20px,30px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+  z-index: 1;
+}
+
+.hero-book-img .book2:hover {
+  z-index: 20;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-book-img {
+    display: flex;
+    margin-left: auto;
+  }
+  .hero-book-img .book-img {
+    width: 180px;
+    height: 256px;
+    border-top: 1px solid rgba(255, 255, 255, .25);
+    border-left: 1px solid rgba(255, 255, 255, .25);
+  }
+}
+
+/* ブックコンテンツ */
+
+.book-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-content {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 0;
+  flex: 1;
+}
+
+.book-img {
+  width: 180px;
+  height: auto;
+  margin-bottom: 1.75rem;
+}
+
+.book1 {
+  box-shadow: 0 6px 16px rgba(149, 117, 205, .3);
+}
+
+.book2 {
+  box-shadow: 0 6px 16px rgba(2, 119, 189, .3);
+}
+
+@media screen and (min-width: 768px) {
+  .book-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .book-content {
+    width: auto;
+    margin-left: 32px;
+  }
+  .book-img {
+    width: 250px;
+    height: 355px;
+    margin-bottom: 0;
+  }
+  .book1 {
+    box-shadow: 0 6px 16px rgba(149, 117, 205, .3);
+  }
+  .book2 {
+    box-shadow: 0 6px 16px rgba(2, 119, 189, .3);
+  }
+}
+
+.book-catchcopy {
+  color: #169cba;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.book-catchcopy .is-mobile {
+  display: block;
+}
+
+.book-title {
+  font-size: 1.5625rem;
+  font-weight: bold;
+  margin-bottom: .75rem;
+}
+
+.book-title em {
+  font-size: .875rem;
+  font-style: normal;
+}
+
+.book-text {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.book-data {
+  font-size: .9375rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  background-color: #D6E1E3;
+  padding: 30px 40px;
+ width: 100%;
+}
+
+.order-area {
+  width: 100%;
+  margin: .5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-area p {
+  font-size: .9375rem;
+  margin-bottom: .75rem;
+  align-self: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+  .book-catchcopy {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .book-catchcopy br {
+    display: none;
+  }
+  .book-title {
+    font-size: 1.5625rem;
+    margin-bottom: 1rem;
+  }
+  .book-text {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    width: calc(800px - 282px);
+  }
+  .order-area {
+    margin: .5rem 0;
+    align-items: flex-start;
+  }
+}
+
+/* フッター */
+
+.footer {
+  color: #fff;
+  background-color: #169cba;
+  padding: 2rem 0 1.5rem;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 3rem 0 2rem;
+  }
+  .footer .container {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer .container {
+    max-width: 800px;
+  }
+}
+
+.adress-area {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+  flex: 1 0 40%;
+}
+
+.logo-white {
+  width: 160px;
+  height: 21px;
+  margin-bottom: 1rem;
+}
+
+.office-name {
+  font-size: .8125rem;
+  font-weight: normal;
+  margin-bottom: .25rem;
+}
+
+.office-data {
+  font-size: .8125rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-nav {
+  font-size: .8125rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  margin-top: -.25rem;
+  margin-left: auto;
+}
+
+.footer-nav li {
+  margin-right: 1rem;
+  line-height: 1.8;
+}
+
+.copyright {
+  font-size: .75rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #90caf9;
+}
+
+@media screen and (min-width: 768px) {
+  .office-name {
+    margin-bottom: .5rem;
+  }
+  .office-data {
+    margin-bottom: 0;
+  }
+  .copyright {
+    font-size: .75rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid #90caf9;
+  }
+}
+
+
+/* 試し読みボタンのフォント色を統一 */
+.sample-button {
+  color: #169CBA !important; /* デフォルトの色 */
+}
+.sample-button:hover {
+  color: #ffffff !important; /* ホバー時の色 */
+}
+
+        .divider {
+            width: 1px;
+            height: 40px;
+            background-color: currentColor;
+        }
+        @media (max-width: 650px) {
+            .web-button, .web-button-single {
+                width: 100%;
+            }
+            .button-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .fax-button, .fax-button-single {
+                width: 100%;
+            }
+            .web-button .text.middle {
+                padding: 0 12px;
+            }
+        }
+
+   button img, .fax-button img, .fax-button-single img {
+  width: 30px;
+  height: 30px;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+}
+    .button .icon-container {
+        position: relative;
+        width: 30px;
+        height: 30px;
+    }
+    .button img.default {
+        opacity: 1;
+    }
+    .button img.hover {
+        opacity: 0;
+    }
+    .web-button:hover img.default,
+    .fax-button:hover img.default {
+        opacity: 0;
+    }
+    .web-button:hover img.hover,
+    .fax-button:hover img.hover {
+        opacity: 1;
+    }
+
+
+.sample-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 260px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffffff;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 20px;
+    border: 2px solid #169CBA;
+    color: #169CBA;
+}
+
+.sample-button:hover {
+    background-color: #169CBA;
+    color: #ffffff;
+}
+
+/* アイコンの設定 */
+.sample-button .icon-container {
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.sample-button .icon-container img {
+    position: absolute;
+    top: -50;
+    left: 10;
+    transition: opacity 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.sample-button .icon-container img.default {
+    opacity: 1;
+}
+
+.sample-button .icon-container img.hover {
+    opacity: 0;
+}
+
+/* ホバー時のアイコン変更 */
+.sample-button:hover .icon-container img.default {
+    opacity: 0;
+}
+
+.sample-button:hover .icon-container img.hover {
+    opacity: 1;
+}
+
+/* テキストのスタイル */
+.sample-button .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.sample-button .line1 {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 2;
+}
+
+.sample-button .line2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+
+.notice-box {
+  background-color: #fff;
+  padding: 1em;
+  margin: 1em 0;
+  font-weight: bold;
+  color: red;
+}
+
+.notice-indent {
+  margin-left: 6em; /* 「2025/4/21　【お詫びとお知らせ】」に揃える目安 */
+}
+
+
+      .order-section {
+      width: 100%;
+      max-width: 540px;
+      margin: 0 auto;
+      padding: 0;
+    }
+ /* ボタンコンテナ */
+    .order-btns {
+      display: flex;
+      align-items: flex-start; 
+      gap: 12px;
+      width: 100%;
+      margin: 1.5em 0 0.5em;
+    }
+/* 共通ボタン */
+    .order-btn {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .order-btn:hover {
+      opacity: 0.8;
+    }
+    /* 色のバリエーション */
+    .order-btn--web    { background-color: #E6007E; }
+    .order-btn--amazon { background-color: #FF9900; }
+    .order-btn--fax    { background-color: #005BAB; }
+    /* アイコン */
+    .icon {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: 12px;
+    }
+    .icon--web    { background-image: url("../img/icon_web_b.png"); }
+    .icon--amazon { background-image: url("../img/icon_amazon_b.png"); }
+    .icon--fax    { background-image: url("../img/icon_fax_a.png"); }
+    /* 注記 */
+    .order-note {
+      text-align: center;
+      font-size: 12px;
+      color: #CC8400;
+      margin: 0;
+    }
+.order-btn-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+
+.order-note {
+  margin: 4px 0 ; 
+  text-align: center;     
+}
+
+ .order-btn-group .order-btn {
+   width: 100%;  
+ }
+
+    /* モバイル: 縦並び */
+    @media screen and (max-width: 767px) {
+      .order-btns {
+        flex-direction: column;
+	   align-items: stretch;   
+      }
+      .order-btn {
+        width: 100%;
+      }
+　　　.order-note {
+    margin: 4px 0 0;
+    text-align: center;
+  }
+ .order-btn-group .order-btn {
+  width: 100%; 
+ }
+    }
+
+/* — Webボタンの文字色を強制的に白に戻す — */
+.order-btn--web,
+.order-btn--web:link,
+.order-btn--web:visited,
+.order-btn--web:hover,
+.order-btn--web:active {
+  color: #fff !important;
+}

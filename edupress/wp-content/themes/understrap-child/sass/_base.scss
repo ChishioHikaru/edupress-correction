@@ -99,7 +99,7 @@ html {
   box-sizing: inherit;
 }
 
-body {
+body.blog {
   line-height: 1;
 }
 
@@ -134,7 +134,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -199,20 +199,20 @@ li {
 }
 
 //safariでのフォーム周りの設定を無効化する
-input[type='text'],
-input[type='button'],
-input[type='submit'],
-input[type='tel'],
-input[type='email'] {
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type="tel"],
+input[type="email"] {
   -webkit-appearance: none;
   border: none;
   box-sizing: border-box;
 }
-input[type='text']:focus,
-input[type='button']:focus,
-input[type='submit']:focus,
-input[type='tel']:focus,
-input[type='email']:focus,
+input[type="text"]:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
 textarea:focus {
   outline: 0;
   background-color: #fff;
@@ -220,35 +220,35 @@ textarea:focus {
 input:-internal-autofill-selected {
   background-color: #fff !important;
 }
-input[type='text']:focus:placeholder-shown,
-input[type='button']:focus:placeholder-shown,
-input[type='submit']:focus:placeholder-shown,
-input[type='tel']:focus:placeholder-shown,
-input[type='email']:focus:placeholder-shown,
+input[type="text"]:focus:placeholder-shown,
+input[type="button"]:focus:placeholder-shown,
+input[type="submit"]:focus:placeholder-shown,
+input[type="tel"]:focus:placeholder-shown,
+input[type="email"]:focus:placeholder-shown,
 textarea:focus:placeholder-shown {
   color: #ddd;
 }
-input[type='text']:focus:-webkit-input-placeholder,
-input[type='button']:focus:-webkit-input-placeholder,
-input[type='submit']:focus:-webkit-input-placeholder,
-input[type='tel']:focus:-webkit-input-placeholder,
-input[type='email']:focus:-webkit-input-placeholder,
+input[type="text"]:focus:-webkit-input-placeholder,
+input[type="button"]:focus:-webkit-input-placeholder,
+input[type="submit"]:focus:-webkit-input-placeholder,
+input[type="tel"]:focus:-webkit-input-placeholder,
+input[type="email"]:focus:-webkit-input-placeholder,
 textarea:focus:-webkit-input-placeholder {
   color: #ddd;
 }
-input[type='text']:focus:-moz-placeholder,
-input[type='button']:focus:-moz-placeholder,
-input[type='submit']:focus:-moz-placeholder,
-input[type='tel']:focus:-moz-placeholder,
-input[type='email']:focus:-moz-placeholder,
+input[type="text"]:focus:-moz-placeholder,
+input[type="button"]:focus:-moz-placeholder,
+input[type="submit"]:focus:-moz-placeholder,
+input[type="tel"]:focus:-moz-placeholder,
+input[type="email"]:focus:-moz-placeholder,
 textarea:focus:-moz-placeholder {
   color: #ddd;
 }
-input[type='text']:focus:-ms-input-placeholder,
-input[type='button']:focus:-ms-input-placeholder,
-input[type='submit']:focus:-ms-input-placeholder,
-input[type='tel']:focus:-ms-input-placeholder,
-input[type='email']:focus:-ms-input-placeholder,
+input[type="text"]:focus:-ms-input-placeholder,
+input[type="button"]:focus:-ms-input-placeholder,
+input[type="submit"]:focus:-ms-input-placeholder,
+input[type="tel"]:focus:-ms-input-placeholder,
+input[type="email"]:focus:-ms-input-placeholder,
 textarea:focus:-ms-input-placeholder {
   color: #ddd;
 }
@@ -267,26 +267,26 @@ select {
   box-sizing: content-box;
 }
 
-input[type='text']:placeholder-shown,
-input[type='email']:placeholder-shown,
-input[type='tel']:placeholder-shown {
+input[type="text"]:placeholder-shown,
+input[type="email"]:placeholder-shown,
+input[type="tel"]:placeholder-shown {
   color: #ddd;
 }
-input[type='text']::-webkit-input-placeholder,
-input[type='email']::-webkit-input-placeholder,
-input[type='tel']::-webkit-input-placeholder {
+input[type="text"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
+input[type="tel"]::-webkit-input-placeholder {
   color: #ddd;
 }
-input[type='text']:-moz-placeholder,
-input[type='email']:-moz-placeholder,
-input[type='tel']:-moz-placeholder,
+input[type="text"]:-moz-placeholder,
+input[type="email"]:-moz-placeholder,
+input[type="tel"]:-moz-placeholder,
 textarea:-moz-placeholder {
   color: #ddd;
 }
 
-input[type='text']:-ms-input-placeholder,
-input[type='email']:-ms-input-placeholder,
-input[type='tel']:-ms-input-placeholder,
+input[type="text"]:-ms-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+input[type="tel"]:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #fff;
 }
@@ -382,15 +382,17 @@ html {
 }
 
 html,
-body {
+body.blog,
+body.group-blog {
   width: 100%;
   height: 100%;
   font-size: 62.5%;
-  font-family: 'Meiryo', 'Hiragino Kaku Gothic Pro', 'Hiragino Sans', sans-serif;
+  font-family: "Meiryo", "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
   font-weight: 500;
   font-display: swap;
 }
-body {
+body,
+body.group-blog {
   overflow-x: hidden;
   @media screen and (max-width: 767px) {
     &.sp_fix {
@@ -414,3 +416,4 @@ svg {
 .slick-list:focus {
   outline: none !important;
 }
+

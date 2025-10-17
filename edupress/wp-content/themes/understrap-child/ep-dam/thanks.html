@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>EP-DAM system | 株式会社エデュプレス</title>
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta name="keywords" content="EP-DAM system,デジタルアセット管理,マネジメント,エデュプレス,EDUPRESS" />
+	<meta name="description" content="EP-DAM systemは、コンテンツ制作の業務改善とあらゆるデータの一元管理と共有・活用を実現するクラウド型データ管理システムです。" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80560935-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80560935-1');
+</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="assets/js/jquery.tile.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css">
+	<link href="assets/css/base.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/style.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/thanks.css" rel="stylesheet" type="text/css">
+<!-- ご希望の日時選択ライブラリここから -->
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" />
+<!-- ご希望の日時選択ライブラリここまで -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWKMXR2');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWKMXR2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	<header>
+		<div class="cont_inner inner_max">
+			<h1>EP-DAM system</h1>
+			<nav>
+				<div class="navbtn sp">
+					<div>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<ul>
+					<li>
+						<a href="./#overview">概要</a>
+					</li>
+					<li>
+						<a href="./#about">DAMシステムとは</a>
+					</li>
+					<li>
+						<a href="./#case">導入事例</a>
+					</li>
+					<li>
+						<a href="./#function">主な機能</a>
+					</li>
+					<li>
+						<a href="./#company">会社紹介</a>
+					</li>
+					<li class="contact">
+						<a href="./#contact_form"><img src="assets/images/icon_mail.svg" alt="">お問い合わせ</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section class="thanks">
+		<div class="cont_inner">
+			<h2>お問い合わせ誠にありがとうございます。</h2>
+			<div class="thanks_box">
+				<p>
+					この度は、当サイトにお問い合わせいただき誠にありがとうございます。
+				</p>
+				<p>
+					ご記入いただきました内容にて受付いたしました。<br>
+					近日中に担当者よりご返信・ご連絡をさせていただきます。<br>
+					今しばらくお待ちください。
+				</p>
+			</div>
+			<div class="company_link">
+				<a href="./">戻る</a>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="cont_inner">
+			<div class="logo">
+				<h3><a href="https://edupress.net/" target="_blank"><img src="assets/images/logo_wabun.png" alt=""></a></h3>
+				<p class="copy">&copy;EDUPRESS Inc.</p>
+			</div>
+			<div class="menu">
+				<ul>
+					<li>
+						<a href="https://edupress.net/privacy.html" target="_blank">個人情報保護方針</a>
+					</li>
+					<li>
+						<a href="https://edupress.net/privacy2.html" target="_blank">個人情報の取り扱いについて</a>
+					</li>
+					<li>
+						<a href="https://edupress.net/socialmedia.html" target="_blank">ソーシャルメディア・ポリシー</a>
+					</li>
+					<li>
+						<a href="https://edupress.net/about.html" target="_blank">サイトについて</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+</body>
+<script src="js/mailform-js.php"></script>
+
+<script>
+	var spWidth = 768;
+	$(function(){
+		$('.navbtn').click(function(){
+			if(!$('nav').hasClass('active')){
+				$('nav').addClass('active');
+				$('nav ul').slideDown();
+		   	}else{
+				$('nav').removeClass('active');
+				$('nav ul').slideUp();
+			}
+		});
+
+		$('nav ul a').click(function(){
+			if($('nav').hasClass('active')){
+			   $('nav').removeClass('active');
+				$('nav ul').slideUp();
+		   	}
+		});
+	});
+
+	$(window).on('load resize', function () {
+		var hh = $('header').outerHeight();
+		if(windowSizeChk() < spWidth){
+		   //sp
+			$('.function_list h5').tile(2);
+			$('body').css('padding-top',hh);
+			$('nav ul').css('top',hh);
+		}else{
+			//pc
+			$('.function_list h5').tile(3);
+			$('nav').removeClass('active');
+			$('nav ul').css('display','');
+			$('body').css('padding-top',hh);
+			$('nav ul').css('top','');
+		}
+	});
+
+	function windowSizeChk(){
+		var temp = window.innerWidth;
+		return temp;
+	}
+</script>
+</html>

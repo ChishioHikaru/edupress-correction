@@ -1,0 +1,911 @@
+html, body,
+h1, h2, h3, h4, h5, h6,
+a, p, span,
+em, small, strong,
+sub, sup,
+mark, del, ins, strike,
+abbr, dfn,
+blockquote, q, cite,
+code, pre,
+ol, ul, li, dl, dt, dd,
+div, section, article,
+main, aside, nav,
+header, hgroup, footer,
+img, figure, figcaption,
+address, time,
+audio, video,
+canvas, iframe,
+details, summary,
+fieldset, form, label, legend,
+table, caption,
+tbody, tfoot, thead,
+tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  line-height: 1.4;
+}
+
+* {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+img {
+  border-style: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+[disabled] {
+  cursor: not-allowed;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Typography helpers */
+
+.has-text-centered {
+  text-align: center !important;
+}
+
+/* レイアウト */
+
+body {
+  color: #4e4e4e;
+  background-color: #fafafa;
+  letter-spacing: 1px;
+  font-feature-settings: "palt"1;
+  font-kerning: auto;
+  font-family: -apple-system,
+  BlinkMacSystemFont,
+  "Helvetica Neue",
+  "Segoe UI",
+  "Hiragino Kaku Gothic ProN",
+  Meiryo,
+  sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1216px) {
+  .container {
+    max-width: 1152px;
+  }
+}
+
+@media screen and (min-width: 1408px) {
+  .container {
+    max-width: 1344px;
+  }
+}
+
+.article {
+  background-color: #e2edf0;
+  padding: 2rem 1.5rem;
+}
+
+.article:first-child {
+  padding-top: 2rem;
+}
+
+.article:last-child {
+  padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .article {
+    padding: 2rem 0;
+  }
+  .article:first-child {
+    padding-top: 3rem;
+  }
+
+  .article:last-child {
+    padding-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .article .container {
+    max-width: 800px;
+  }
+}
+
+/* ボタン */
+
+.button {
+  -webkit-appearance: none;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: 1rem;
+  line-height: 1;
+  height: 3.25em;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(.375em - 2px);
+  padding-left: .75em;
+  padding-right: .75em;
+  padding-top: calc(.375em - 1px);
+  text-align: center;
+  white-space: nowrap;
+  margin-bottom: .5rem;
+}
+
+.button.btn-contact {
+  font-size: .875rem;
+  background-color: #169cba;
+  color: #fff;
+  margin-bottom: 0;
+  padding-left: .75em;
+  padding-right: .75em;
+}
+
+.button.btn-lump {
+  background-color: #005ba7;
+  color: #fff;
+  font-size: 1.125rem;
+}
+
+.button.btn-publish {
+  background-color: #169cba;
+  color: #fff;
+  font-size: 1.125rem;
+  padding-left: 3.8em;
+  padding-right: 3.8em;
+}
+
+@media screen and (min-width: 768px) {
+  .button.btn-contact {
+    padding-left: 2.4em;
+    padding-right: 2.4em;
+  }
+  .button.btn-publish {
+    background-color: #169cba;
+    padding-left: .75em;
+    padding-right: .75em;
+  }
+}
+
+/* 調整 */
+
+.mb1rem {
+  margin-bottom: 1rem;
+}
+
+.mb2rem {
+  margin-bottom: 2rem;
+}
+
+.mb3rem {
+  margin-bottom: 3rem;
+}
+
+/* ヘッダー */
+
+.header {
+  padding: 1rem;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 130px;
+  height: 17px;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 1.25rem 0;
+  }
+  .logo {
+    width: 160px;
+    height: 21px;
+  }
+}
+
+/* ヒーロー */
+
+.hero {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero.is-book {
+  color: #fff;
+}
+
+.hero-body {
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 1.5rem 1.5rem 2rem;
+  background-image: url(../img/bgimg1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-body::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: radial-gradient(ellipse at top, rgba(22, 156, 186, 0) 50%, rgba(22, 156, 186, 1) 100%);
+}
+
+@media screen and (min-width: 769px), print {
+  .hero.is-medium .hero-body {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+  }
+}
+
+.hero-body .container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-body .container {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-body .container {
+    max-width: 800px;
+  }
+}
+
+.hero-title-area {
+  display: flex;
+  flex-direction: column;
+  margin-right: 0;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-start;
+  order: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+.authorized-text em {
+  font-size: 1.375rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.introduce-text {
+  font-size: 1.375rem;
+  font-weight: normal;
+}
+
+.title {
+  font-size: 1.25rem;
+  line-height: 1.1;
+  border: 1px solid #f00;
+  margin-bottom: .5rem;
+  order: 0;
+  text-align: center;
+  letter-spacing: .5rem;
+  padding: .25rem 0 .25rem .8rem;
+}
+
+.hero-sub-title {
+  font-size: 1.25rem;
+  line-height: 1.1;
+  border: 1px solid #fff;
+  margin-bottom: .5rem;
+  order: 0;
+  text-align: center;
+  letter-spacing: .5rem;
+  padding: .25rem 0 .25rem .8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-title-area {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+  .hero-title {
+    font-size: 3rem;
+    line-height: 1.4;
+  }
+  .authorized-text em {
+    font-size: 2.4rem;
+  }
+  .introduce-text {
+    font-size: 2.4rem;
+  }
+  .hero-sub-title {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: .8rem;
+    padding: .5rem 0 .5rem .8rem;
+  }
+}
+
+.hero-book-img {
+  display: flex;
+  margin-left: 0;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-book-img .book-img {
+  width: 120px;
+  height: auto;
+  border-top: 1px solid rgba(255,255,255,.25);
+  border-left: 1px solid rgba(255, 255, 255, .25);
+}
+
+.hero-book-img .book1 {
+  z-index: 10;
+  box-shadow: 2px 3px 8px rgba(0,0,0,.3);
+}
+
+.hero-book-img .book2 {
+  transform: translate(-20px,30px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+  z-index: 1;
+}
+
+.hero-book-img .book2:hover {
+  z-index: 20;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-book-img {
+    display: flex;
+    margin-left: auto;
+  }
+  .hero-book-img .book-img {
+    width: 180px;
+    height: 256px;
+    border-top: 1px solid rgba(255, 255, 255, .25);
+    border-left: 1px solid rgba(255, 255, 255, .25);
+  }
+}
+
+/* ブックコンテンツ */
+
+.book-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-content {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 0;
+  flex: 1;
+}
+
+.book-img {
+  width: 180px;
+  height: auto;
+  margin-bottom: 1.75rem;
+}
+
+.book1 {
+  box-shadow: 0 6px 16px rgba(149, 117, 205, .3);
+}
+
+.book2 {
+  box-shadow: 0 6px 16px rgba(2, 119, 189, .3);
+}
+
+@media screen and (min-width: 768px) {
+  .book-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .book-content {
+    width: auto;
+    margin-left: 32px;
+  }
+  .book-img {
+    width: 250px;
+    height: 355px;
+    margin-bottom: 0;
+  }
+  .book1 {
+    box-shadow: 0 6px 16px rgba(149, 117, 205, .3);
+  }
+  .book2 {
+    box-shadow: 0 6px 16px rgba(2, 119, 189, .3);
+  }
+}
+
+.book-catchcopy {
+  color: #169cba;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.book-catchcopy .is-mobile {
+  display: block;
+}
+
+.book-title {
+  font-size: 1.5625rem;
+  font-weight: bold;
+  margin-bottom: .75rem;
+}
+
+.book-title em {
+  font-size: .875rem;
+  font-style: normal;
+}
+
+.book-text {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.book-data {
+  font-size: .9375rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.order-area {
+  width: 100%;
+  margin: .5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-area p {
+  font-size: .9375rem;
+  margin-bottom: .75rem;
+  align-self: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+  .book-catchcopy {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .book-catchcopy br {
+    display: none;
+  }
+  .book-title {
+    font-size: 1.5625rem;
+    margin-bottom: 1rem;
+  }
+  .book-text {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    width: calc(800px - 282px);
+  }
+  .order-area {
+    margin: .5rem 0;
+    align-items: flex-start;
+  }
+}
+
+/* フッター */
+
+.footer {
+  color: #fff;
+  background-color: #169cba;
+  padding: 2rem 0 1.5rem;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 3rem 0 2rem;
+  }
+  .footer .container {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer .container {
+    max-width: 800px;
+  }
+}
+
+.adress-area {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+  flex: 1 0 40%;
+}
+
+.logo-white {
+  width: 160px;
+  height: 21px;
+  margin-bottom: 1rem;
+}
+
+.office-name {
+  font-size: .8125rem;
+  font-weight: normal;
+  margin-bottom: .25rem;
+}
+
+.office-data {
+  font-size: .8125rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-nav {
+  font-size: .8125rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  margin-top: -.25rem;
+  margin-left: auto;
+}
+
+.footer-nav li {
+  margin-right: 1rem;
+  line-height: 1.8;
+}
+
+.copyright {
+  font-size: .75rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #90caf9;
+}
+
+@media screen and (min-width: 768px) {
+  .office-name {
+    margin-bottom: .5rem;
+  }
+  .office-data {
+    margin-bottom: 0;
+  }
+  .copyright {
+    font-size: .75rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid #90caf9;
+  }
+}
+
+.btn-amazon {
+  width: 200px;
+  height: 41px;
+}
+
+.tokutei-title {
+  color: #169cba;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+.table-tokutei {
+  width: 100%;
+}
+
+.table-tokutei th,
+.table-tokutei td {
+  padding: .75rem .25rem;
+  border-bottom: 1px solid #abd1d9;
+}
+
+.table-tokutei th {
+  text-align: left;
+}
+
+/* ---------- 20250227追記　　グループ 5 ボタン統合版用スタイル ---------- */
+#group5-buttons {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* 見出し（WEBで注文 / FAXで注文 など） */
+#group5-buttons h2 {
+  font-size: 1.6rem;
+  margin: 40px 0 20px;
+  padding: 0.25em 0.5em;/*上下 左右の余白*/
+  background: transparent;/*背景透明に*/
+  border-left: solid 6px #169CBA;/*左線*/
+}
+
+/* 
+  ボタン全体の共通スタイル
+  （WEB用: .btn-cart / FAX用: .btn の両方が継承）
+*/
+#group5-buttons .button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+  padding: 20px 25px 20px 60px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* WEBで注文用（ピンク枠） */
+#group5-buttons .btn-cart {
+  border: 2px solid #ec407a;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #ec407a;
+  min-width: 250px;
+}
+#group5-buttons .btn-cart:hover {
+  background-color: #ec407a;
+  color: #fff;
+}
+
+/* FAXで注文用（ネイビー枠） */
+#group5-buttons .btn {
+  border: 2px solid #0055a2;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #0055a2;
+  min-width: 250px;
+}
+#group5-buttons .btn:hover {
+  background-color: #0055a2;
+  color: #fff;
+}
+
+/* アイコン（PDF / ショップ） */
+#group5-buttons .button .icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  transition: background 0.3s;
+}
+/* WEBで注文アイコン（ピンク → ホバー時白） */
+#group5-buttons .btn-cart .icon {
+  background: url("../img/shop_icon_pink.png") no-repeat center / contain;
+}
+#group5-buttons .btn-cart:hover .icon {
+  background: url("../img/shop_icon_white.png") no-repeat center / contain;
+}
+/* FAXで注文アイコン（ネイビー → ホバー時白） */
+#group5-buttons .btn .icon {
+  background: url("../img/pdf_dl_icon_navy.png") no-repeat center / contain;
+}
+#group5-buttons .btn:hover .icon {
+  background: url("../img/pdf_dl_icon_white.png") no-repeat center / contain;
+}
+
+/* テキストグループ：小文字(small)/大文字(big) */
+#group5-buttons .text-wrap,
+#group5-buttons .group {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  line-height: 1.3;
+}
+#group5-buttons .text-wrap .small,
+#group5-buttons .group .small {
+  font-size: 14px;
+}
+#group5-buttons .text-wrap .big,
+#group5-buttons .group .big {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+/* FAX用仕切り線 */
+#group5-buttons .divider {
+  width: 1px;
+  background-color: #0055a2;
+  height: 10px;
+  margin: 0 20px;
+}
+
+/* Amazonボタン */
+#group5-buttons .btn-amazon {
+  display: inline-block;
+  text-decoration: none;
+}
+#group5-buttons .btn-amazon img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+#group5-buttons .btn-amazon:hover {
+  opacity: 0.8;
+}
+
+/* ─── WEBで注文 ─── */
+/* 行単位に分割して縦に並べ、1行目に2個・2行目に1個など柔軟に対応 */
+#group5-buttons .web-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* 1行（.web-row）ごとに横並び（PC時） */
+#group5-buttons .web-container .web-row {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start; /* 左寄せ */
+}
+/* 2行目「その他／一般の方」ボタンの固定幅指定例 */
+#group5-buttons .web-container .web-row .btn-cart.button.other {
+  width: 250px;
+}
+
+/* スマホ(768px以下)で1行1個ずつに */
+@media screen and (max-width: 768px) {
+  #group5-buttons .web-container .web-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  /* 幅が画面からはみ出さないように */
+  #group5-buttons .web-container .web-row .btn-cart.button.other {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+/* ─── FAXで注文 ─── */
+#group5-buttons .fax-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 1個目ボタン：左右2グループ＋仕切り線 */
+#group5-buttons .fax-container a.btn.button.fax-first {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+/* テキストを中央寄せ */
+#group5-buttons .fax-container a.btn.button.fax-first .group {
+  text-align: center;
+}
+/* 縦線仕切り */
+#group5-buttons .fax-container a.btn.button.fax-first .divider {
+  width: 1px;
+  height: 30px;
+  background-color: #0055a2;
+  margin: 0 50px;
+}
+
+/* スマホ時は縦並びにして、文字のこぼれを防ぐため高さを拡大 */
+@media screen and (max-width: 768px) {
+  #group5-buttons .fax-container a.btn.button.fax-first {
+    flex-direction: column;
+    min-height: 120px;
+  }
+  #group5-buttons .fax-container a.btn.button.fax-first .divider {
+    width: 50px;
+    height: 1px;
+    margin: 10px 0;
+  }
+}
+
+/* 2個目ボタン：その他／一般の方（左寄せ、幅250px） */
+#group5-buttons .fax-container a.btn.button.other-fax {
+  width: 250px;
+  align-self: flex-start;
+}
+@media screen and (max-width: 768px) {
+  #group5-buttons .fax-container a.btn.button.other-fax {
+    width: 100%;
+    max-width: 250px;
+  }
+}

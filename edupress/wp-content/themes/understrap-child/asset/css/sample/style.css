@@ -96,7 +96,7 @@ html {
   box-sizing: inherit;
 }
 
-body {
+body.blog {
   line-height: 1;
 }
 
@@ -387,7 +387,8 @@ caption {
 }
 
 html,
-body {
+body.blog,
+body.group-blog {
   width: 100%;
   height: 100%;
   font-size: 62.5%;
@@ -396,11 +397,13 @@ body {
   font-display: swap;
 }
 
-body {
+body,
+body.group-blog {
   overflow-x: hidden;
 }
 @media screen and (max-width: 767px) {
-  body.sp_fix {
+  body.sp_fix,
+  body.group-blog.sp_fix {
     position: fixed;
     width: 100%;
     height: 100%;

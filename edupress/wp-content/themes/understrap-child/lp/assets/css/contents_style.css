@@ -65,6 +65,10 @@ background-color: #10a2c1;
 color: #ffffff;
 }
 
+h4 strong {
+color: #ffffff;
+}
+
 p {
 line-height: 2.0;
 }
