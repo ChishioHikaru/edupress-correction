@@ -343,17 +343,18 @@ button {
 }
 
 /*スマートフォンサイトでaタグをタップしたときにでるハイライトの色を消す*/
-body.loaded a {
+/* #base-not が存在しないページだけ、以下を有効にする */
+:root:not(:has(#base-not)) body.loaded a {
   -webkit-tap-highlight-color: transparent;
 }
 @media screen and (min-width: 751px) {
-  body.loaded a {
+  :root:not(:has(#base-not)) body.loaded a {
     transition: 0.3s;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
   }
-  body.loaded a:hover {
+  :root:not(:has(#base-not)) body.loaded a:hover {
     transition: 0.3s;
     cursor: pointer;
     backface-visibility: hidden;
@@ -373,10 +374,9 @@ table {
   width: 100%;
 }
 
-th,
-td {
+:root:not(:has(#base-not)) th,
+:root:not(:has(#base-not)) td {
   vertical-align: middle;
-  border: solid 1px #000;
   font-weight: normal;
   text-align: left;
   border: 0;
@@ -386,9 +386,9 @@ caption {
   text-align: left;
 }
 
-html,
-body.blog,
-body.group-blog {
+:root:not(:has(#base-not)),
+:root:not(:has(#base-not)) body.blog,
+:root:not(:has(#base-not)) body.group-blog {
   width: 100%;
   height: 100%;
   font-size: 62.5%;
